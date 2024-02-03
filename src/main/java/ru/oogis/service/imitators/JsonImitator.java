@@ -15,19 +15,21 @@ public class JsonImitator implements Imitator {
     @Override
     public ResponseEntity<SignalRequest> run(SignalRequest request) {
 
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        RestTemplate restTemplate = new RestTemplate();
-//
-//        String response;
-//
-//        try {
-//            response = objectMapper.writeValueAsString(request);
-//        } catch (JsonProcessingException e) {
-//            throw new RuntimeException(e);
-//        }
-//        String URL = request.getIp() + ":" + request.getPort();
-//
-//        restTemplate.exchange(URL, HttpMethod.POST, new HttpEntity<>(response), String.class);
+/*
+        ObjectMapper objectMapper = new ObjectMapper();
+        RestTemplate restTemplate = new RestTemplate();
+
+        String response;
+
+        try {
+            response = objectMapper.writeValueAsString(request);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+        String URL = request.getIp() + ":" + request.getPort();
+
+        restTemplate.exchange(URL, HttpMethod.POST, new HttpEntity<>(response), String.class);
+*/
 
         SignalRequest responseBody =
                 new SignalRequest(request.getMode(), request.getIp(), request.getPort(), request.getParameters());
